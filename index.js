@@ -15,10 +15,8 @@ virtualOutput.send('noteon', {
 */
 
 //'nanoKONTROL2 0' 
-/*
-var input = new easymidi.Input('nanoKONTROL2 0');
+var input = new easymidi.Input('MPK Mini Mk II');
 input.on('noteon', function (msg) {
     console.log('msg: ', msg);
   // do something with msg
 });
-*/ 
