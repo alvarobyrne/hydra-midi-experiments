@@ -1,1 +1,1 @@
-var easymidi = require('easymidi');
+var easymidi = require('./node_modules/easymidi');
