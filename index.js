@@ -20,3 +20,11 @@ input.on('noteon', function (msg) {
     console.log('msg: ', msg);
   // do something with msg
 });
+input.on('cc', function (msg) {
+    console.log('cc-msg: ', msg);
+  // do something with msg
+});
+input.on('pitch', function (msg) {
+    console.log('pitch-msg: ', msg);
+  // do something with msg
+});
