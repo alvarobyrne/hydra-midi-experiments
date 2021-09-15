@@ -1,10 +1,13 @@
 var easymidi = require('easymidi');
 var virtualOutput = new easymidi.Output('NodeVirtual', true);
+let i=0;
 setInterval(function() {
-console.log('sending',Math.random());
-virtualOutput.send('noteon', {
-  note: 64,
-  velocity: 127,
-  channel: 0
-});
-}, 1000);
+    i++;
+    let note =60+ i%12;
+    console.log('sending',Math.random());
+    virtualOutput.send('noteon', {
+    note,
+    velocity: 127,
+    channel: 0
+    });
+}, 100);
