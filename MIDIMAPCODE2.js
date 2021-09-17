@@ -34,15 +34,16 @@ akai.onmidimessage=function (e){
   let index = data[1];
   let datum = sincAkai[index] = data[2];
   console.log('index : ',index, 'datum : ', datum);
-}
+};
 
-osc(()=>sincAbleton[55]/4,0.8,()=>sincAkai[1]*6/127).out()
+
+osc(()=>sincAbleton[55]/4 , 0.8 , ()=>sincAkai[1]*6/127).out()
+osc(   100                , 0.1 ,     2                ).out()
 
 noise(()=>{
-return sincronizacion[2]*2+1
+return sincAkai[2]*2+1
 }).out()
 
-osc(100,0.1,2).out()
 
 osc(
 100
@@ -54,22 +55,29 @@ osc(
 
 osc(
   ()=>{
-return sincronizacion[1]*2+100
+return sincAkai[1]*2+100
 }
 ,
 ()=>{
-return sincronizacion[2]/127
+return sincAkai[2]/127
 }
 ,
 ()=>{
-return sincronizacion[3]*6/127
+return sincAkai[3]*6/127
 })
 .out()
 
-noise(1,0.1).color(()=>{return sincronizacion[1]*0.1+0.5},0.3,0.7).invert(0.1).rotate(2,0.1).kaleid(()=>{return sincronizacion[2]*0.1+2/127})
-.add(shape(4,0.3,(()=>{return sincronizacion[3]*0.01+0.3})).modulate(o0)) // Neutron //
+noise(1,0.1)
+.color(()=>( sincAkai[1]*0.1+0.5),0.3,0.7)
+.invert(0.1)
+.rotate(2,0.1)
+.kaleid(()=>( sincAkai[2]*0.1+2/127))
+.add(shape(4,0.3,(()=>( sincAkai[3]*0.01+0.3))).modulate(o0)) // Neutron //
 .out()
 
-noise(  ()=>{return sincronizacion[1]*0.1+1},()=>{return sincronizacion[2]*0.5/127}).kaleid(()=>{return sincronizacion[3]*0.1+4/127}).color(()=>{return sincronizacion[6]*0.1+0.5},0.2,0.8)
-.add(noise(()=>{return sincronizacion[4]*0.5+3/127},()=>{return sincronizacion[5]*0.5+10/127}).color(()=>{return sincronizacion[7]*0.1},0.5,1))
+noise(  ()=>( sincAkai[1]*0.1+1),()=>( sincAkai[2]*0.5/127))
+.kaleid(()=>( sincAkai[3]*0.1+4/127))
+.color(()=>( sincAkai[6]*0.1+0.5),0.2,0.8)
+.add(noise(()=>( sincAkai[4]*0.5+3/127),()=>( sincAkai[5]*0.5+10/127))
+.color(()=>sincAkai[7]*0.1,0.5,1))
 .out()
