@@ -1,4 +1,4 @@
-Trying out things with midi and [hydra](https://hydra.ojack.xyz/)... well, really, in hydra in atom, [atom-hydra](https://github.com/ojack/atom-hydra) package.
+Trying out things with midi and [hydra](https://hydra.ojack.xyz/)... well, really, in `hydra` in `atom`, [atom-hydra](https://github.com/ojack/atom-hydra) package.
 
 ## Inspiration
 
@@ -35,7 +35,7 @@ The `bridge.js` scripts recieves the midi messages sent from `ableton` and emits
 ## Clarification
 Although needles to say, it's said in order of/for clarity: "this is just one particular way of doing things".
 
-A virtual device input is created which recieves midi data form `ableton` and another virtual device output sends it out so that hydra (or any other software) can listen to the messages. This was done in such a  way because we were not able to read direct midi messages from `ableton`.
+A virtual device input is created which recieves midi data form `ableton` and another virtual device output sends it out so that `hydra` (or any other software) can listen to the messages. This was done in such a  way because we were not able to read direct midi messages from `ableton`.
 
 [easymidi](https://github.com/dinchak/node-easymidi) provides such virtual devices creation. it'sthe only project dependency: couldn't get it to work on windows.
 # Hardware devices controllers
@@ -68,11 +68,11 @@ Here is another image with an example of hardware/device/controller id identific
 
 In the `ableton` case this is done automatically and depends on the virtual device naming as explained in the section [above](#device-name-matching).
 
-## Hydra usage
+## `Hydra` usage
 
 Again, needles to say, the way you use midi messages is up to you, but this is how it's done here:
 
-After runnig the code in the `midi-init.js` file in `atom-hydra`, one can use the some globally scoped variables to control hydra synths/functions parameters/arguments: This variables are:
+After runnig the code in the `midi-init.js` file in `atom-hydra`, one can use the some globally scoped variables to control `hydra` synths/functions parameters/arguments: This variables are:
 
 -  `sincAbleton`
 -  `abletonNote`
@@ -80,3 +80,8 @@ After runnig the code in the `midi-init.js` file in `atom-hydra`, one can use th
 -  `abletonVelocity`
 
 In the `hydra-live.js` file there are examples of how to use them.
+
+# References
+
+- [ableton-js](https://github.com/leolabs/ableton-js)
+- [using OSC & max 4 live](https://dev.to/fabiantjoeaon/sending-detailed-midi-messages-from-ableton-to-the-browser-using-osc-over-udp-4b9m)
