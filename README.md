@@ -80,7 +80,3 @@ After runnig the code in the `midi-init.js` file in `atom-hydra`, one can use th
 -  `abletonVelocity`
 
 In the `hydra-live.js` file there are examples of how to use them.
-
-# Further clarification
-
-The author's mind of this `README.md` file (and of the most of this repo) is a mess: everything is easier than described in this file and, overall, midi messaging with web technologies is much easier than the approach taken here. We didn't try hard enough to read messages from ableton directly without the use of virtual midi ports.
