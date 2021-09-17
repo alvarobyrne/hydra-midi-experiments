@@ -4,7 +4,6 @@ let i=0;
 setInterval(function() {
     i++;
     let note =60+ i%12;
-    console.log('sending',Math.random());
     virtualOutput.send('noteon', {
         note,
         velocity: 127,
