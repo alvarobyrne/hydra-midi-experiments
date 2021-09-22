@@ -85,3 +85,4 @@ In the `hydra-live.js` file there are examples of how to use them.
 
 - [ableton-js](https://github.com/leolabs/ableton-js)
 - [using OSC & max 4 live](https://dev.to/fabiantjoeaon/sending-detailed-midi-messages-from-ableton-to-the-browser-using-osc-over-udp-4b9m)
+- [eggman a.k.a john lindquist explaining how to send midi from `js` to `ableton`] (https://www.youtube.com/watch?v=vW2Lve_hMzg)
